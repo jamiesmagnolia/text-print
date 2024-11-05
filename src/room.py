@@ -1,14 +1,12 @@
 class Room:
-    num_exits = 0
 
-    def __init__(self, name: str):
+    def __init__(self, name, desc):
+        """
+        Constructor.
+        :param name: The name of the room.
+        """
         self.name = name
+        self.desc = desc
         self.exits = {}
 
-    def connect(self, next_room):
-        """
 
-        :type next_room: object
-        """
-        Room.num_exits += 1
-        self.exits[Room.num_exits] = next_room
