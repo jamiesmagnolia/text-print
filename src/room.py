@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from player import Player
+
 
 class Room:
     """
@@ -34,6 +36,9 @@ class Room:
 
     def __repr__(self):
         return f"Room: ('{self.name}')\nDescription: ('{self.desc}')\nExits: ('{self.exits}')"
+
+    def move_player(self, player: Player):
+        pass
 
     def add_exit(self, new_exit: Room) -> None:
         """Add a single exit to the room's current exits"""
