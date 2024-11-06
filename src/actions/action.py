@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 
+from player import Player
+
 
 class Action(ABC):
     """
@@ -9,11 +11,10 @@ class Action(ABC):
     """
 
     @abstractmethod
-    def execute(self, player: 'Player', game: 'Game') -> str:
+    def execute(self, player: 'Player') -> str:
         """
         Executes the action.
         :param player: The player to execute the action.
-        :param game: The game to play on.
         :return: A description of the executed action.
         """
         pass
