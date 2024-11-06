@@ -16,7 +16,7 @@ class Room:
         :param desc: The description of the room.
         """
         self.name = name
-        self.desc = desc
+        self.desc = desc + "\n"
         self.exits = []
         self.items = []
 
