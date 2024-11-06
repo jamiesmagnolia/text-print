@@ -12,6 +12,9 @@ class Player:
     def __repr__(self):
         return f"Player\nName: {self.name}\nHP: {self.hp}\nStamina: {self.stamina}\nInventory: {self.inventory}"
 
+    def alive(self) -> bool:
+        return self.hp > 0
+
     def display_stats(self):
         print("Stats: ")
         print("HP: ", self.hp)
