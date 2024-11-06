@@ -16,4 +16,7 @@ class MoveAction(Action):
         self.target_room = target_room
 
     def execute(self, player, game):
+        """
+        Navigate to the target room.
+        """
         game.current_room = self.target_room
