@@ -1,8 +1,12 @@
 import os
 
+from player import Player
 from room import Room
 
 # Pre-game
+
+# Player
+player = Player("Harker", 1000, 500)
 
 # Room initialisation
 room1 = Room("Bedroom", "There's a single bed pushed against the corner.")
@@ -33,8 +37,11 @@ def game_loop():
 
         print(f"\nYou're in {current_room}.")
         print(current_room.desc)
-        print("\nWhat will you do next?")
 
+        # Player stats
+        player.display_stats()
+
+        print("\nWhere will you go next?")
         # Display navigation options
         for i, room, in enumerate(current_room.exits, 1):
             print(f"{i}. Go to {room}")
