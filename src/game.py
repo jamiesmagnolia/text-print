@@ -45,7 +45,6 @@ class Game:
                 # Use Action execution
                 if 0 <= choice < len(self.current_room.exits):
                     actions[int(choice)].execute(self.player, self)
-                    # self.current_room = self.current_room.exits[choice]
                 else:
                     print("That's not a valid option.")
             elif choice == 'q':  # End game
