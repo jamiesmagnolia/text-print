@@ -33,7 +33,7 @@ def game_loop():
 
         print(f"\nYou're in {current_room}.")
         print(current_room.desc)
-        print("\nWhere would you like to go?")
+        print("\nWhat will you do next?")
 
         # Display navigation options
         for i, room, in enumerate(current_room.exits, 1):
